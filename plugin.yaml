@@ -1,0 +1,35 @@
+name: uk-companies
+version: 0.1.0
+manifest_version: 2
+requires_hermes: ">=0.21.4"
+description: >
+  UK Companies returns one sheet for a company name or number, split by
+  official source. Tools are uk_check, uk_search, uk_officers, uk_psc,
+  uk_filings, uk_charity, uk_vat, and uk_land.
+author: TakeshiTGAL
+license: MIT
+homepage: https://github.com/TakeshiTGAL/hermes-plugin-uk-companies
+tags: [uk, companies-house, charity, gazette, land-registry]
+python_dependencies: []
+platforms:
+  - linux
+  - macos
+provides_tools:
+  - uk_check
+  - uk_search
+  - uk_officers
+  - uk_psc
+  - uk_filings
+  - uk_charity
+  - uk_vat
+  - uk_land
+requires_env: []
+optional_env:
+  - name: COMPANIES_HOUSE_API_KEY
+    description: "Free Companies House API key from the developer hub. Public reads use this key. The plugin still loads when it is unset."
+    url: "https://developer.company-information.service.gov.uk/get-started"
+    secret: true
+  - name: CHARITY_COMMISSION_API_KEY
+    description: "Free Charity Commission subscription key from the developer hub. The plugin still loads when it is unset."
+    url: "https://api-portal.charitycommission.gov.uk/"
+    secret: true
